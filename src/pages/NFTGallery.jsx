@@ -2,6 +2,10 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Azuki from "./Images/Azuki.webp";
+import Skyborn from "./Images/Skyborn.webp";
+import CoolCats from "./Images/CoolCats.webp";
+import NiftyIsland from "./Images/NiftyIsland.webp";
 import "./NFTGallery.css";
 
 const NFTCard = ({ image, title, floorPrice, totalVolume }) => {
@@ -28,25 +32,25 @@ const NFTCard = ({ image, title, floorPrice, totalVolume }) => {
 const NFTGallery = () => {
   const nftData = [
     {
-      image: "azuki-elementals.jpg",
+      image: {Azuki},
       title: "Azuki Elementals",
       floorPrice: "0.29 ETH",
       totalVolume: "66K ETH",
     },
     {
-      image: "skyborne-genesis.jpg",
+      image: {Skyborn},
       title: "Skyborne - Genesis Immortals",
       floorPrice: "0.04 ETH",
       totalVolume: "1,236 ETH",
     },
     {
-      image: "cool-cats.jpg",
+      image: {CoolCats},
       title: "Cool Cats",
       floorPrice: "0.52 ETH",
       totalVolume: "155K ETH",
     },
     {
-      image: "nifty-island.jpg",
+      image: {NiftyIsland},
       title: "Nifty Island: Legendary P...",
       floorPrice: "0.19 ETH",
       totalVolume: "2,317 ETH",

@@ -1,0 +1,58 @@
+.explore-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #121212;
+    color: white;
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .filters input, .filters select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: white;
+  }
+  
+  .nft-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .nft-card {
+    width: 250px;
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .nft-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .nft-image {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .nft-title {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .nft-price {
+    font-size: 16px;
+    color: #f39c12;
+  }
+  

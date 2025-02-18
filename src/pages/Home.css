@@ -50,9 +50,23 @@ body {
     transform: scale(1.1);
     color: #4ecca3;
   }
-  
+  .header .actions li{
+    /* background-color: #ffffff; */
+    list-style: none;
+    color: #ffffff;
+  }
+  .Link{
+    font-size: 20px;
+    text-decoration: none;
+    color: #f9f9f9;
+  }
+  .Link:hover{
+    color: #4ecca3;
+    /* cursor: pointer; */
+    transform: scale(2);
+  }
   .header .profile {
-    background-color: #2d2d50;
+    background-color: #6767d1;
     padding: 10px 15px;
     border-radius: 5px;
   }
@@ -119,6 +133,10 @@ body {
   }
   
   /* Banner */
+  .banner:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+  }
   .banner-left{
     margin-top: -155px;
   }
@@ -133,7 +151,7 @@ body {
     margin-top: -50px;
     padding-left: 170px;
   }
-.top-creators{
+  .top-creators{
   border-radius: 20px;
   color: #e40c0cdb;
   background-color:gray;
@@ -146,7 +164,10 @@ body {
   width: 550px;
   height: 350px;
   gap: 1px;
-}
+  }
+  .top-creators:hover{
+    transform: scale(1.05);
+  }
   .Topcreator header{
     padding-top: 100px;
   }
@@ -204,6 +225,7 @@ body {
     cursor: pointer;
   }
   .explore-btn:hover{
+    transform: scale(1.1);
     background-color: orange;
   }
   
@@ -253,29 +275,33 @@ body {
   /* Live Auction */
   .live-auction {
     margin-left: 200px;
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .Live{
-    margin-left: -500px;
+    margin-left: -600px;
     margin-bottom: 10px;
     
   }
   .Live:hover{
     
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(1.04);
     color: orange;
   }
   
   .auction-card {
     margin-top: -400px;
-    margin-left: 650px;
+    margin-left: 640px;
     display: flex;
-    width: 40%;
-    height: 300px;
+    width: 48%;
+    height: 350px;
     background-color: #2d2d50;
     border-radius: 20px;
     /* overflow: hidden; */
+  }
+  .auction-card:hover{
+    cursor: pointer;
+    transform: scale(1.05);
   }
   .auction-card h2{
     margin-top: -10px;
@@ -374,6 +400,7 @@ body {
     font-size: 14px;
   }
   .creators-list span:hover{
+    transform: scale(2);
     cursor: pointer;
   }
   
@@ -391,153 +418,70 @@ br{
   background-color: white;
 }
   /* Footer Styles */
+
+  /* Footer */
 .footer {
-  /* background-color: #250064; */
-  color: #ffffff;
-  padding: 20px 20px;
-  height: 10px;
-  font-family: 'Arial', sans-serif;
-}
-.footer-end {
-  background-color: #ffffff;
-  color: #ffffff;
-  padding:8px;
-  height: 10px;
-  font-family: 'Arial', sans-serif;
-}
-.footer-end h4{
-  font-size: 10px;
-  align-items: center;
-  color: black;
-  margin-top: -2px;
+  background: #1a1a1a;
+  padding: 40px 60px;
+  color: white;
+  border-top: 1px solid #292929;
 }
 
-.footer .section {
-  margin-top: -50px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.footer .section h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #ffffff;
-}
-
-.footer .section p {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #b5b5b5;
-}
-
-.footer .section input[type="email"] {
-  width: 80%;
-  max-width: 400px;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-  border: 1px solid #3b3b3b;
-  font-size: 1rem;
-}
-
-.footer .section #Signup {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #2a9d8f;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.footer .section-buttons{
-  margin-left: 100px;
-  cursor: pointer;
-}
-.footer .section-buttons:hover{
-  cursor: pointer;
-  background-color: orange;
-  transform: scale(1.1);
-  border-radius: 10px;
-}
-
-.footer .section #Signup:hover {
-  background-color: #21867a;
-}
-
-.footer .social-icons {
+.footer-content {
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.footer .social-icons a {
-  padding-top: 20px;
-  color: #ffffff;
-  font-size: 1rem;
-  text-decoration: none;
-}
-
-.footer .social-icons a:hover {
-  color: #2a9d8f;
-}
-
-.footer .columns {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 30px;
-  text-align: left;
-}
-
-.footer .columns .column {
+.footer-section {
+  flex: 1;
+  min-width: 200px;
   margin-bottom: 20px;
-  
 }
 
-.footer .columns .column h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
   color: #ffffff;
 }
 
-.footer .columns .column ul {
+.footer-section ul {
   list-style: none;
   padding: 0;
 }
 
-.footer .columns .column ul li {
-  gap: 10px;
-  margin-bottom: 5px;
+.footer-section ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #b3b3b3;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.footer .columns .column ul li a {
-  color: #b5b5b5;
-  text-decoration: none;
-  font-size: 1rem;
+.footer-section ul li:hover {
+  color: #ffffff;
 }
 
-.footer .columns .column ul li a:hover {
-  color: #2a9d8f;
-}
-
-.footer footer {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.footer footer p {
-  color: #b5b5b5;
-  font-size: 0.9rem;
-}
-.section-button{
-  padding-left: 500px;
-}
-.social-icons h3{
+.social-icons {
   display: flex;
-  padding-top: -5px;
-  justify-items: center ;
   align-items: center;
-  padding-left: -60px;
-  margin-left: -400px;
-  margin-right: 60px;
+  gap: 15px;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #b3b3b3;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
 }
