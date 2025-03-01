@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { FaTwitter, FaDiscord, FaInstagram } from "react-icons/fa";
-
 import logo from "./Images/Logo.png";
 import RareNFT from "./Images/RareNFT.jpg";
 import LiveAuction from "./Images/LiveAuction.jpg";
@@ -13,10 +12,14 @@ import { GiFire } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import LoginPage from "../pages/LoginPage";
+import Wallet from "./Wallet";
+
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
+  const [isWalletOpen, setIsWalletOpen] = useState(false);
+
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -24,6 +27,10 @@ const Home = () => {
 
   return (
     <div className="dashboard">
+      <div>
+
+        {isWalletOpen && <Wallet onClose={() => setIsWalletOpen(false)} />}
+      </div>
       <main className="content">
         <header className="header">
           <div>
@@ -35,11 +42,13 @@ const Home = () => {
             placeholder="Search items, collections, and users"
           />
           <div className="actions">
-            <h3>Home</h3>
+            <li><Link className="Link" to="/">Home</Link></li>
             <li><Link className="Link" to="/marketplace">Marketplace</Link></li>
             <li><Link className="Link" to="/AboutUs">AboutUs</Link></li>
-            <button className="icon">🌞</button>
-            <button className="icon">🔔</button>
+            <button className="wallet-open-btn" onClick={() => setIsWalletOpen(true)}>
+              <span className="icon">💰</span> Open Wallet
+            </button>
+
             <button className="login-button" onClick={() => setShowLogin(true)}>Login</button>
             <button className="menu-button" onClick={toggleMenu}>
               {isMenuOpen ? "Close Menu" : "Open Menu"}
@@ -50,17 +59,16 @@ const Home = () => {
         {isMenuOpen && (
           <div className="dropdown-menu">
             <ul>
-              <li>Dashboard</li>
-              <li>Market</li>
-              <li>Active Bids</li>
-              <li>Favorites</li>
-              <li>My Portfolio</li>
-              <li>Wallet</li>
+              <li><Link className="Links" to="/Dashboard">Dashboard</Link></li>
+              <li><Link className="Links" to="/marketplace">Market</Link></li>
+              <li><Link className="Links" to="/ActiveBids">Active Bids</Link></li>
+              <li><Link className="Links" to="/MyPortfoliyo">My Portfolio</Link></li>
+              <li><Link className="Links" to="/Wallet">Wallet</Link></li>
             </ul>
           </div>
         )}
 
-        {showLogin && <LoginPage onClose={() => setShowLogin(false)} />} 
+        {showLogin && <LoginPage onClose={() => setShowLogin(false)} />}
 
         <div className="main-section">
           <section className="banner">
@@ -71,16 +79,16 @@ const Home = () => {
                   Collect Your <br /> Rare <span>NFT</span> Here
                 </h1>
                 <Link to="/ExploreRareNFTs">
-                <button className="explore-btn">Explore Now</button>
+                  <button className="explore-btn">Explore Now</button>
                 </Link>
               </div>
             </div>
           </section>
           <section className="top-creator">
             <div className="top-creators">
-              <div className="header">
+              <div className="top-creator-header">
                 <h2>Top Creator <GiFire /></h2>
-                <a href="#">See more</a>
+                <a href="See more">See more</a>
               </div>
               <ul className="creators-list">
                 <li>
@@ -126,49 +134,46 @@ const Home = () => {
                 <h1>
                   Live Auction
                 </h1>
-                <button className="live-button">Explore Now</button>
+                <Link to="/LiveAuction">
+                  <button className="live-button">Explore Now</button>
+                </Link>
               </div>
             </div>
           </section>
         </div>
         <footer className="footer">
-        <div className="footer-content">
-          <div className="footer-section">
-            <h3>Marketplace</h3>
-            <ul>
-              <li>All NFTs</li>
-              <li>Art</li>
-              <li>Gaming</li>
-              <li>Memberships</li>
-            </ul>
+          <div className="footer-content">
+            <div className="footer-section">
+              <h2>Marketplace</h2>
+              <ul>
+                <li><Link className="Links" to="/marketplace">Marketplace</Link></li>
+                <li><Link className="Links" to="/marketplace">Art</Link></li>
+                <li><Link className="Links" to="/marketplace">Game</Link></li>
+                <li><Link className="Links" to="/marketplace">Music</Link></li>
+              </ul>
+            </div>
+            <div className="footer-section">
+              <h2>Resources</h2>
+              <ul>
+                <li><Link className="Links" to="/HelpCenter">HelpCenter</Link></li>
+              </ul>
+            </div>
+            <div className="footer-section">
+              <h2>Community</h2>
+              <ul>
+                <li><Link className="Links" to="/AboutUs">AboutUs</Link></li>
+              </ul>
+            </div>
+            <div className="footer-section social-icons">
+              <h3>Follow Us</h3>
+              <FaTwitter className="social-icon" />
+              <FaDiscord className="social-icon" />
+              <FaInstagram className="social-icon" />
+            </div>
           </div>
-          <div className="footer-section">
-            <h3>Resources</h3>
-            <ul>
-              <li>Help Center</li>
-              <li>Blog</li>
-              <li>Newsletter</li>
-            </ul>
-          </div>
-          <div className="footer-section">
-            <h3>Community</h3>
-            <ul>
-              <li>Forums</li>
-              <li>Creators</li>
-              <li>Affiliates</li>
-            </ul>
-          </div>
-          <div className="footer-section social-icons">
-            <h3>Follow Us</h3>
-            <FaTwitter className="social-icon" />
-            <FaDiscord className="social-icon" />
-            <FaInstagram className="social-icon" />
-          </div>
-        </div>
-      </footer>
+        </footer>
       </main>
     </div>
-    
   );
 };
 

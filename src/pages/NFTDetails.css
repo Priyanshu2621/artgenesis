@@ -1,0 +1,123 @@
+/* Advanced NFT Details Page Styles */
+
+.nft-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1300px;
+  margin: 40px auto;
+  padding: 20px;
+  background: linear-gradient(to right, #1e1e2e, #282a36);
+  color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.main-nft {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 40px;
+  padding: 20px;
+}
+
+.main-nft-image {
+  width: 45%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.nft-info {
+  flex: 1;
+  text-align: left;
+}
+
+.nft-info h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ff9a9e;
+}
+
+.nft-info p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  color: #ddd;
+}
+
+.bid-now-btn {
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bid-now-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(255, 65, 108, 0.5);
+}
+
+h3 {
+  font-size: 1.8rem;
+  margin: 30px 0 15px;
+  text-align: center;
+  color: #ff9a9e;
+}
+
+.related-nfts {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+}
+
+.related-nft-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.related-nft-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.3);
+}
+
+.related-nft-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.related-nft-card:hover .related-nft-image {
+  transform: scale(1.1);
+}
+
+.related-nft-card p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #ff9a9e;
+}
+
+.related-nft-card span {
+  font-size: 1rem;
+  color: #ddd;
+}

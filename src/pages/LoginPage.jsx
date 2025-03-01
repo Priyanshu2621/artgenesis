@@ -66,7 +66,7 @@ const LoginPage = ({ onClose }) => {
         </div>
 
         <div className="login-options">
-          <a href="#" className="forgot-password">Forgot Password?</a>
+          <a href="forgot-password" className="forgot-password">Forgot Password?</a>
         </div>
 
         <button className="login-btn" onClick={handleLogin}>Login</button>

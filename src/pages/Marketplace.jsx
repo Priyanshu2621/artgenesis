@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { FaEthereum, FaHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { BrowserProvider } from "ethers";
 import logo from "./Images/Logo.png"
 import Muraqqa from "./Images/Muraqqa.webp";
 import ManWorld from "./Images/ManWorld.webp";
@@ -71,8 +73,26 @@ const items = [
 
 ];
 
+
 const Marketplace = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const [walletAddress, setWalletAddress] = useState("");
+
+  const connectWallet = async () => {
+    if (window.ethereum) {
+      try {
+        const provider = new BrowserProvider(window.ethereum);
+        const signer = await provider.getSigner();
+        const address = await signer.getAddress();
+        setWalletAddress(address);
+      } catch (error) {
+        console.error("Wallet connection failed:", error);
+      }
+    } else {
+      alert("MetaMask not detected. Please install MetaMask.");
+    }
+  };
 
   const filteredItems = selectedCategory === "All" ? items : items.filter(item => item.category === selectedCategory);
 
@@ -80,13 +100,16 @@ const Marketplace = () => {
     <div className="marketplace">
       
       <header className="header">
-      <div>
+        <div>
           <img className="logo" src={logo} alt="Logo" />
         </div>
         <input type="text" className="search" placeholder="Search items, collections, creators" />
         <div className="actions">
-          <button className="create-btn">Create</button>
-          <button className="wallet-btn">Connect Wallet</button>
+        <li><Link className="Link" to="/">Home</Link></li>
+        <li><Link className="Link" to="/AboutUs">AboutUs</Link></li>
+          <button className="wallet-btn" onClick={connectWallet}>
+            {walletAddress ? `${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}` : "Connect Wallet"}
+          </button>
         </div>
       </header>
 

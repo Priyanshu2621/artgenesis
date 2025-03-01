@@ -1,7 +1,9 @@
 /* NFTGallery.css */
 
 .nft-gallery {
+  height: 400px;
   border-radius: 15px;
+  margin-left: 20px;
   width: 700px;
   padding: 2rem;
   background-color: #1e1e2f;
@@ -20,7 +22,7 @@
 
 .nft-slider {
   max-width: 600px;
-  height: 250px;
+  height: 350px;
   margin: 0 auto;
 }
 
@@ -94,5 +96,8 @@
 }
 
 .slick-list {
+  height: 490px;
+  opacity: 1;
+  transform: translate3d(-621px, 0px, 0px);
   margin: 0 -10px;
 }

@@ -1,0 +1,73 @@
+/* Full-screen Auction Page */
+.auction-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #2a2929, #050505, #2b1c1c);
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Auction Card */
+.auction-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+}
+
+/* Auction Image */
+.auction-image {
+  width: 100%;
+  max-height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* Timer and Bid Info */
+.auction-timer, .current-bid {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.auction-timer span, .current-bid span {
+  color: #ffcc00;
+}
+
+/* Bid Input */
+.bid-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+/* Bid Button */
+.bid-button {
+  background: #ff5722;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.bid-button:hover {
+  background: #ff3d00;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,8 +10,16 @@ import NiftyIsland from "./Images/NiftyIsland.webp";
 import "./NFTGallery.css";
 
 const NFTCard = ({ image, title, floorPrice, totalVolume }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/nft-details/${title}`, {
+      state: { image, title, floorPrice, totalVolume },
+    });
+  };
+
   return (
-    <div className="collection-card">
+    <div className="collection-card" onClick={handleClick} style={{ cursor: "pointer" }}>
       <img src={image} alt={title} />
       <h3>
         {title} <span className="verified">✔</span>
@@ -32,25 +41,25 @@ const NFTCard = ({ image, title, floorPrice, totalVolume }) => {
 const NFTGallery = () => {
   const nftData = [
     {
-      image: {Azuki},
+      image: Azuki,
       title: "Azuki Elementals",
       floorPrice: "0.29 ETH",
       totalVolume: "66K ETH",
     },
     {
-      image: {Skyborn},
+      image: Skyborn,
       title: "Skyborne - Genesis Immortals",
       floorPrice: "0.04 ETH",
       totalVolume: "1,236 ETH",
     },
     {
-      image: {CoolCats},
+      image: CoolCats,
       title: "Cool Cats",
       floorPrice: "0.52 ETH",
       totalVolume: "155K ETH",
     },
     {
-      image: {NiftyIsland},
+      image: NiftyIsland,
       title: "Nifty Island: Legendary P...",
       floorPrice: "0.19 ETH",
       totalVolume: "2,317 ETH",

@@ -3,7 +3,7 @@ body {
     margin: 0;
     font-family: "Arial", sans-serif;
     color: #fff;
-    background-color: #1a1a2e;
+    background-color: #1c1c34;
   }
   .logo{
     cursor: pointer;
@@ -20,17 +20,86 @@ body {
   
   /* Content */
   .content {
-    flex-grow: 1;
-    padding: 20px;
+    flex-grow: 2;
+    padding: 0px;
   }
   
   .header {
     align-items: center;
-    height: 40px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
   }
+  /* Light Theme */
+.light-theme {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  color: #f5f2f2;
+  transition: all 0.3s ease-in-out;
+}
+
+.light-theme .header,
+.light-theme .footer {
+  color: #000000;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.light-theme .header .actions .Link {
+  color: #000000;
+}
+.light-theme .header .actions .Link:hover {
+  transform: scale(1.1);
+  color: #000000;
+}
+.light-theme .header .actions h3 {
+  color: #000000;
+}
+.light-theme .header .actions h3:hover {
+  color: #000000;
+}
+/* Dark Funky Theme */
+.dark-theme {
+  background: linear-gradient(135deg, #0f0f0f, #1e1e2e);
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.dark-theme .header,
+.dark-theme .footer {
+  background: rgba(20, 20, 20, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+.light-theme .footer h3{
+  color: #050505;
+}
+.light-theme .footer li{
+  color: #050505;
+}
+
+/* Theme Toggle Button */
+.icon {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* Dark Mode Button Animation */
+.dark-theme .icon {
+  color: #f39c12;
+}
+
+.light-theme .icon {
+  color: #2c3e50;
+}
+
   
   .header .search {
     margin-left: 100px;
@@ -46,7 +115,7 @@ body {
     align-items: center;
     gap: 30px;
   }
-  .header .actions h3:hover{
+  .header .actions h2:hover{
     transform: scale(1.1);
     color: #4ecca3;
   }
@@ -56,21 +125,61 @@ body {
     color: #ffffff;
   }
   .Link{
-    font-size: 20px;
+    /* padding-top: 100px; */
+    font-size: 25px;
     text-decoration: none;
     color: #f9f9f9;
   }
+  .Links{
+    /* padding-top: 100px; */
+    
+    font-size: 20px;
+    text-decoration: none;
+    color: #f9f9f9;
+   
+  }
+  .Links:hover{
+    color: #00aaff;
+  }
   .Link:hover{
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 10px 10px;
     color: #4ecca3;
+    transition: transform 0.5s;
+    transform: scale(1.05);
     /* cursor: pointer; */
-    transform: scale(2);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 94, 98, 0.6);
   }
   .header .profile {
     background-color: #6767d1;
     padding: 10px 15px;
     border-radius: 5px;
   }
+  .login-button{
+    width: 70px;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff5e62);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0px 0px;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(255, 94, 98, 0.4);
+    position: relative;
+    overflow: hidden;
+  }
+  .login-button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 94, 98, 0.6);
+  }
   .header .actions .icon:hover{
+    transition: transform 0.3s;
     transform: scale(1.2);
   }
   .header .profile:hover{
@@ -88,6 +197,7 @@ body {
     display: flex;
   }
   .menu-button {
+    margin-right: 10px;
     background-color: #4caf50;
     color: rgb(0, 0, 0);
     padding: 10px 15px;
@@ -98,6 +208,7 @@ body {
   }
   
   .menu-button:hover {
+    transition: transform 0.3s;
     transform: scale(1.1);
     background-color: #45a049;
   }
@@ -133,18 +244,56 @@ body {
   }
   
   /* Banner */
+  .banner {
+    background: linear-gradient(45deg, rgb(16, 3, 160), rgb(0, 0, 0), rgb(241, 25, 25),rgb(228, 160, 33));
+    width: 50%;
+    height: 350px;
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .img{
+    width: 100%;
+    height: 100px;
+  }
+  
+  .banner .explore-btn {
+    background-color: #4ecca3;
+    color: #1a1a2e;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .explore-btn:hover{
+    transform: scale(1.1);
+    background-color: orange;
+  }
   .banner:hover{
+    transition: transform 0.3s;
     cursor: pointer;
     transform: scale(1.05);
   }
+  
   .banner-left{
     margin-top: -155px;
+  }
+  .banner-left h1{
+    color: #b7e902;
   }
   .Rare{
     border-radius: 15px;
     margin-top: -0px;
     width: 100%;
     height: 350px;
+  }
+  /* Top Creator */
+  .top-creator-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 300px;
   }
   .top-creator{
     
@@ -166,6 +315,7 @@ body {
   gap: 1px;
   }
   .top-creators:hover{
+    transition: transform 0.3s;
     transform: scale(1.05);
   }
   .Topcreator header{
@@ -203,31 +353,7 @@ body {
     padding-right: -150px;
     margin-right: -100px;
    }
-  .banner {
-    background: linear-gradient(45deg, rgb(16, 3, 160), rgb(0, 0, 0), rgb(241, 25, 25),rgb(228, 160, 33));
-    width: 50%;
-    height: 350px;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-  }
-  .img{
-    width: 100%;
-    height: 100px;
-  }
   
-  .banner .explore-btn {
-    background-color: #4ecca3;
-    color: #1a1a2e;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .explore-btn:hover{
-    transform: scale(1.1);
-    background-color: orange;
-  }
   
   /* Trending NFTs */
   .trending-section {
@@ -275,7 +401,7 @@ body {
   /* Live Auction */
   .live-auction {
     margin-left: 200px;
-    margin-top: 40px;
+    margin-top: -10px;
   }
   .Live{
     margin-left: -600px;
@@ -283,9 +409,8 @@ body {
     
   }
   .Live:hover{
-    
+    transition: transform 0.3s;
     cursor: pointer;
-    transform: scale(1.04);
     color: orange;
   }
   
@@ -302,6 +427,7 @@ body {
   .auction-card:hover{
     cursor: pointer;
     transform: scale(1.05);
+    transition: transform 0.3s;
   }
   .auction-card h2{
     margin-top: -10px;
