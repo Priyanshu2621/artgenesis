@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./Dashboard.css";
 import { Link } from "react-router-dom";
 import SettingsPage from "./Setting";
-import Emiway from "./Images/Emiway.webp";
-import NaturalVibes from "./Images/NaturalVibes.webp";
-import HorrorFaces from "./Images/HorrorFaces.webp";
+import Sketch from "./Images/sketch.jpg";
+import Music from "./Images/Music.jpg";
+import direction from "./Images/direction.jpg";
 
 const Dashboard = () => {
   const [activeSection, setActiveSection] = useState("overview");
@@ -36,18 +36,18 @@ const Dashboard = () => {
               <h1>My NFTs</h1>
               <div className="nft-list">
                 <div className="nft-card">
-                  <img src={Emiway} alt="Emiway" className="nft-image" />
-                  <p>Emiway - 1.2 Eth</p>
+                  <img src={Music} alt="Music" className="nft-image" />
+                  <p>Music - 1.2 Pol</p>
                 </div>
 
                 <div className="nft-card">
-                  <img src={NaturalVibes}alt="NaturalVibes" className="nft-image" />
-                  <p>NaturalVibes - 3.4 Eth</p>
+                  <img src={direction}alt="Direction" className="nft-image" />
+                  <p>Direction - 3.4 Pol</p>
                 </div>
 
                 <div className="nft-card">
-                  <img src={HorrorFaces} alt="HorrorFaces" className="nft-image" />
-                  <p>HorrorFaces - 2.4 Eth</p>
+                  <img src={Sketch} alt="Sketch" className="nft-image" />
+                  <p>Sketch - 2.4 Pol</p>
                 </div>
 
               </div>
@@ -60,18 +60,18 @@ const Dashboard = () => {
             <h1>My NFTs</h1>
             <div className="nft-list">
             <div className="nft-card">
-                  <img src={Emiway} alt="Emiway" className="nft-image" />
-                  <p>Emiway - 1.2 Eth</p>
+            <img src={Music} alt="Music" className="nft-image" />
+            <p>Music - 1.2 Pol</p>
                 </div>
 
                 <div className="nft-card">
-                  <img src={NaturalVibes}alt="NaturalVibes" className="nft-image" />
-                  <p>NaturalVibes - 3.4 Eth</p>
+                <img src={direction}alt="Direction" className="nft-image" />
+                <p>Direction - 3.4 Pol</p>
                 </div>
 
                 <div className="nft-card">
-                  <img src={HorrorFaces} alt="HorrorFaces" className="nft-image" />
-                  <p>HorrorFaces - 2.4 Eth</p>
+                <img src={Sketch} alt="Sketch" className="nft-image" />
+                <p>Sketch - 2.4 Pol</p>
                 </div>
             </div>
           </div>

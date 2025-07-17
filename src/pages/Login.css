@@ -5,10 +5,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 9999; /* Ensures modal is always on top */
   animation: fadeIn 0.3s ease-in-out;
 }
 
@@ -19,7 +20,9 @@
   border-radius: 12px;
   text-align: center;
   width: 350px;
+  max-width: 90%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
   animation: slideIn 0.3s ease-in-out;
 }
 
@@ -33,13 +36,14 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* Input Fields with Icons */
+/* Input Fields */
 .input-container {
   position: relative;
   width: 100%;
 }
 
 .input-icon {
+  margin-left: -35px;
   position: absolute;
   top: 50%;
   left: 12px;
@@ -69,42 +73,30 @@ input {
   color: #bbb;
 }
 
-/* Login Button */
-.login-btn {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  background: #6c5dd3;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.login-btn:hover {
-  background: #5a4bcf;
-}
-
-/* Google and Wallet Login */
-.alternative-login p {
-  color: #bbb;
-  margin: 15px 0;
-}
-
-.google-btn, .wallet-btn {
+/* Buttons */
+.login-btn,
+.google-btn,
+.wallet-btn {
   width: 100%;
   padding: 12px;
   border: none;
   border-radius: 8px;
-  color: white;
   font-size: 16px;
   cursor: pointer;
   margin: 5px 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background 0.3s ease-in-out;
+}
+
+.login-btn {
+  background: #6c5dd3;
+  color: white;
+}
+
+.login-btn:hover {
+  background: #5a4bcf;
 }
 
 .google-btn {
@@ -112,7 +104,6 @@ input {
 }
 
 .google-btn:hover {
-  transform: scale(1.05);
   background: linear-gradient(90deg, #4285F4, #34A853, #FBBC05, #EA4335);
 }
 
@@ -121,14 +112,16 @@ input {
 }
 
 .wallet-btn:hover {
-  transform: scale(1.05);
   background: #302a22;
 }
 
 .login-icon {
   margin-right: 8px;
 }
-
+.email{
+  width: 350px;
+ margin-left: 0px;
+}
 /* Close Button */
 .close-btn {
   margin-top: 10px;
@@ -175,6 +168,12 @@ input {
   margin-bottom: 10px;
 }
 
+/* Fix Floating Cards */
+.featured-nfts {
+  position: relative;
+  z-index: 1;
+}
+
 /* Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -185,74 +184,14 @@ input {
   from { transform: translateY(-20px); }
   to { transform: translateY(0); }
 }
-/* Modal Background */
-.login-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999; /* Ensures modal is always on top */
-}
 
-/* Login Container */
-.login-content {
-  background: #1e1e2f;
-  padding: 30px;
-  border-radius: 12px;
+/* Welcome message styling */
+.welcome-message {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4a90e2; /* soft blue */
   text-align: center;
-  width: 350px;
-  max-width: 90%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  z-index: 10000; /* Makes sure it is above everything */
-}
-
-/* Input Fields */
-.input-container {
-  position: relative;
-  width: 100%;
-}
-
-input {
-  width: calc(100% - 40px);
-  padding: 12px 35px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  background: #28293d;
-  color: #fff;
-  outline: none;
-}
-
-/* Button Styles */
-.login-btn, .google-btn, .wallet-btn {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  margin: 5px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.google-btn {
-  background: #db4437;
-}
-
-.wallet-btn {
-  background: #f5a623;
-}
-
-/* Fix Floating Cards */
-.featured-nfts {
-  position: relative;
-  z-index: 1;
+  margin: 30px 0 20px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }

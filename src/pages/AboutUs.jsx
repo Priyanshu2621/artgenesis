@@ -34,7 +34,7 @@ const AboutUs = () => {
           <div className="team-card">
             <img src={Priyanshu} alt="Founder" />
             <h3>Priyanshu Sharma</h3>
-            <p>Frontend Devloper & UI/UX Designer</p>
+            <p>Frontend Devloper </p>
           </div>
           <div className="team-card">
             <img src={Ayush} alt="Designer" />
@@ -44,12 +44,12 @@ const AboutUs = () => {
           <div className="team-card">
             <img src={Classic} alt="Developer" />
             <h3>Akok Albino</h3>
-            <p>Backend Devlopment</p>
+            <p>Researcher</p>
           </div>
           <div className="team-card">
             <img src={Manas} alt="Developer" />
             <h3>Manas Suthar</h3>
-            <p>Researcher</p>
+            <p>UI/UX Designer and Backend</p>
           </div>
         </div>
       </section>

@@ -43,26 +43,26 @@ const NFTGallery = () => {
     {
       image: Azuki,
       title: "Azuki Elementals",
-      floorPrice: "0.29 ETH",
-      totalVolume: "66K ETH",
+      floorPrice: "0.29 Pol",
+      totalVolume: "6 Pol",
     },
     {
       image: Skyborn,
       title: "Skyborne - Genesis Immortals",
-      floorPrice: "0.04 ETH",
-      totalVolume: "1,236 ETH",
+      floorPrice: "0.04 Pol",
+      totalVolume: "1 Pol",
     },
     {
       image: CoolCats,
       title: "Cool Cats",
-      floorPrice: "0.52 ETH",
-      totalVolume: "155K ETH",
+      floorPrice: "0.52 Pol",
+      totalVolume: "1.2 Pol",
     },
     {
       image: NiftyIsland,
       title: "Nifty Island: Legendary P...",
-      floorPrice: "0.19 ETH",
-      totalVolume: "2,317 ETH",
+      floorPrice: "0.19 Pol",
+      totalVolume: "2 Pol",
     },
   ];
 

@@ -177,3 +177,109 @@ body {
 .footer ul li {
   cursor: pointer;
 }
+/* Popup Background */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  padding: 10px;
+}
+
+/* Popup Content */
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: popupFadeIn 0.3s ease-in-out;
+}
+
+/* Popup Animation */
+@keyframes popupFadeIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Popup Heading */
+.popup-content h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: black;
+}
+.popup-content p {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+/* Popup Image */
+.popup-content img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Popup Buttons */
+.popup-content button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+  font-weight: bold;
+}
+
+.popup-content button:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* Close Button */
+.popup-content .close-btn {
+  background: #ff4d4d;
+  color: white;
+}
+
+.popup-content .close-btn:hover {
+  background: #cc0000;
+}
+
+/* Input Field */
+.popup-content input {
+  width: 95%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.popup-content input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
